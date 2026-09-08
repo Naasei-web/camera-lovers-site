@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Camera Lovers.com</title>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="assets/images__1_-removebg-preview.png" width="40px" height="40px" alt="camera lovers logo"  title="Camera Lovers Logo"></div>
+
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="links" id="main-links">
+            <a href="index.html">Home</a>
+            <a href="https://en.wikipedia.org/wiki/History_of_the_camera">About</a>
+            <a href="https://camerajunky.blog/">blog</a>
+        </div>
+    </nav>
+    <div class="content">
+        
+<h2>This is  Camera lovers Space.</h2>
+<h3>Do you love photography?</h3>
+<a href="https://unsplash.com/s/photos/cameras" target="_blank" rel="noopener noreferrer"><button>Explore More</button></a>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const links = document.querySelector('.links');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = links.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        });
+    </script>
+</body>
+</html>
